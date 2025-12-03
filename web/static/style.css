@@ -1,77 +1,167 @@
-body { 
-    background: #f7f7f7; 
-    font-family: sans-serif; 
+/* --- 整體與排版 --- */
+body {
+    /* 保持柔和的漸變背景 */
+    background: linear-gradient(135deg, #f0f4f8, #c9d6de); 
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
 }
 
 .container {
-    width: 600px; 
-    margin: 40px auto; 
-    background: white;
-    padding: 20px; 
+    max-width: 650px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+}
+
+h2 {
+    text-align: center;
+    color: #FFB6C1; /* 新主色調: 較柔和的淡粉色 (Light Pink) */
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #fff3f5; /* 搭配新主色調 */
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #FFB6C1; /* 新主色調 */
+    margin-top: 30px;
+    border-left: 5px solid #ffdde3; /* 搭配新主色調 */
+    padding-left: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* --- 輸入框與按鈕 --- */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-textarea { 
-    width: 100%; 
-    height: 120px; 
-    margin-bottom: 12px; 
+input:focus, textarea:focus {
+    border-color: #FFB6C1; /* 焦點顏色 */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 182, 193, 0.7);
 }
 
-input { 
-    width: 100%; 
-    margin-bottom: 12px; 
-    padding: 8px; 
+textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
-button { 
-    padding: 10px 14px; 
-    margin-top: 10px; 
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+button:active {
+    transform: scale(0.98);
+}
+
+/* 生成報告按鈕 */
+.container > button {
+    background: #FFB6C1; /* 新主色調 (較柔和) */
+    color: #333; /* 為了保持對比，使用深色文字 */
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.5);
+}
+
+.container > button:hover {
+    background: #e6a4ad; /* 懸停時變暗 */
+    color: white; /* 懸停時文字轉白以保持美觀 */
+}
+
+/* 下載報告按鈕 */
+button.download {
+    background: #4CAF50; /* 綠色保持不變 */
+    color: white;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+button.download:hover {
+    background: #388e3c; /* 綠色懸停時變暗 */
+}
+
+/* 下載連結的包裝 */
+#downloadBtn {
+    text-decoration: none;
+    display: block !important;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* --- 輸出區塊 --- */
 pre {
-    background: #f0f0f0; 
-    padding: 12px; 
-    border-radius: 6px;
+    background: #fffafa; 
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #ffe6eb; /* 柔和的邊框，搭配新主色調 */
     white-space: pre-wrap;
+    font-size: 0.95em;
+    color: #444;
+    overflow-x: auto;
 }
 
-button.download { 
-    background: #4CAF50; 
-    color: white; 
-}
-
-/* ===== Loading Modal ===== */
-
+/* --- Loading Modal --- */
 .loading-modal {
     position: fixed;
-    top: 0; 
+    top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.6);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 1000;
 }
 
 .loading-box {
     background: #ffffff;
-    padding: 30px 40px;
-    border-radius: 14px;
+    padding: 35px 50px;
+    border-radius: 16px;
     text-align: center;
-    font-size: 18px;
-    box-shadow: 0 0 18px rgba(0,0,0,0.25);
+    font-size: 1.1em;
+    color: #FFB6C1; /* 主色調 */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
 .spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #ddd;
-    border-top-color: #4CAF50;
+    width: 60px;
+    height: 60px;
+    border: 6px solid #fceef0; /* 柔和的底色 */
+    border-top-color: #FFB6C1; /* 主色調轉動部分 */
     border-radius: 50%;
     animation: spin 0.9s linear infinite;
-    margin: 0 auto 18px;
+    margin: 0 auto 20px;
 }
 
 @keyframes spin {
