@@ -26,14 +26,14 @@ The system demonstrates advanced LLM usage, including Function Calling, Token Ch
 ### Installation
 1. Clone the repository:
    ```text
-   git clone https://github.com/pukyle/2025Theory_Of_Computation_Final_Project.git
+   git clone https://github.com/JKaiWang/2025Theory_Of_Computation_Final_Project.git
    ```
 2. Install dependencies:
    ```text
    pip install -r requirements.txt
    ```
 3. Set up your API Key:
-   Create a .env file or update config.py.
+   Create a API.txt file or update config.py.
    ```text
    LLM_API_KEY = "your_key_here"
    ```
