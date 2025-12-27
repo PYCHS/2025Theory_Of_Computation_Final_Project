@@ -19,6 +19,40 @@ The system demonstrates advanced LLM usage, including Function Calling, Token Ch
 ### Finite State Machine (FSM)
 <img width="1686" height="508" alt="TOC_FSM-2025-11-24-082639" src="https://github.com/user-attachments/assets/c7d192da-142e-4424-8d59-04719ed8d2e8" />
 
+## Quick Start (Online Demo)
+
+If you prefer not to set up the local environment, you can try our deployed online version immediately.
+
+👉 **Try it here: [AI Relationship Analyst Agent (Render Online)](https://two025theory-of-computation-final-svz3.onrender.com/)**
+
+---
+
+### Important Note (Please Read)
+
+This project is hosted on Render's free tier. If the website is inactive for **15 minutes**, the server will automatically go to sleep to conserve resources.
+
+**When you visit the link, you may see a loading screen similar to the image below. Please be patient and wait for about 30 seconds to 1 minute for the server to wake up.**
+
+
+
+---
+
+### Dual Mode Features
+
+Once the site loads, you can switch between two modes using the buttons in the top-right corner:
+
+### 1. Consultation Mode 📖 
+This mode provides in-depth analysis. Please describe your relationship issue and provide actual chat logs. The system will use built-in psychological models to generate a detailed emotional analysis report for you.
+
+<img width="1918" height="992" alt="image" src="https://github.com/user-attachments/assets/647b2ad4-15f9-4dcc-9049-afd9428a1ebf" />
+
+### 2. Conversation Mode 💬 
+This mode offers real-time interaction. You can chat with the AI companion for immediate responses and emotional support, just like talking to a friend.
+
+<img width="1918" height="983" alt="image" src="https://github.com/user-attachments/assets/3f7c5deb-fb92-4179-b9b4-8729f481be3d" />
+
+<br>
+
 ## How to Run
 ### Prerequisites
 * Python 3.8+
